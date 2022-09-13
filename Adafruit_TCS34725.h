@@ -197,6 +197,7 @@ class Adafruit_TCS34725 {
 public:
   Adafruit_TCS34725(uint8_t = TCS34725_INTEGRATIONTIME_2_4MS,
                     tcs34725Gain_t = TCS34725_GAIN_1X);
+  ~Adafruit_TCS34725();
 
   boolean begin(uint8_t addr = TCS34725_ADDRESS, TwoWire *theWire = &Wire);
   boolean init();

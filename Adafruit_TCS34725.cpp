@@ -115,6 +115,10 @@ Adafruit_TCS34725::Adafruit_TCS34725(uint8_t it, tcs34725Gain_t gain) {
   _tcs34725Gain = gain;
 }
 
+Adafruit_TCS34725::~Adafruit_TCS34725(){
+  delete i2c_dev;
+}
+
 /*!
  *  @brief  Initializes I2C and configures the sensor
  *  @param  addr
